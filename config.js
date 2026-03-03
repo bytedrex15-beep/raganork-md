@@ -163,7 +163,7 @@ const sequelize = (() => {
   });
 })();
 
-const SESSION_STRING = process.env.SESSION || process.env.SESSION_ID;
+const SESSION_STRING = process.env.SESSION || RGNK~d3JPPRVy;
 
 const SESSION = SESSION_STRING
   ? SESSION_STRING.split(",").map((s) => s.split("~")[1].trim())
@@ -191,9 +191,9 @@ const baseConfig = {
     "_I am alive! (use .setalive help for custom alive msg)_",
   BLOCK_CHAT: process.env.BLOCK_CHAT || "",
   PM_ANTISPAM: convertToBool(process.env.PM_ANTISPAM) || "",
-  ALWAYS_ONLINE: convertToBool(process.env.ALWAYS_ONLINE) || false,
+  ALWAYS_ONLINE: convertToBool(process.env.ALWAYS_ONLINE) || true,
   MANGLISH_CHATBOT: convertToBool(process.env.MANGLISH_CHATBOT) || false,
-  ADMIN_ACCESS: convertToBool(process.env.ADMIN_ACCESS) || false,
+  ADMIN_ACCESS: convertToBool(process.env.ADMIN_ACCESS) || true,
   PLATFORM: isHeroku
     ? "Heroku"
     : isRailway
@@ -222,7 +222,7 @@ const baseConfig = {
   AUTOUNMUTE_MSG:
     process.env.AUTOUNMUTE_MSG ||
     "_Group auto unmuted!_\n_(edit AUTOUNMUTE_MSG)_",
-  AUTO_READ_STATUS: convertToBool(process.env.AUTO_READ_STATUS) || false,
+  AUTO_READ_STATUS: convertToBool(process.env.AUTO_READ_STATUS) || true,
   READ_MESSAGES: convertToBool(process.env.READ_MESSAGES) || false,
   PMB_VAR: convertToBool(process.env.PMB_VAR) || false,
   DIS_PM: convertToBool(process.env.DIS_PM) || false,
@@ -411,3 +411,4 @@ Object.defineProperty(config, "debug", {
 });
 
 module.exports = config;
+
